@@ -37,7 +37,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="text-white/80 text-base sm:text-lg mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
-            Estamos conformando una red exclusiva de inversionistas para incubar el Batch 2026 
+            Estamos conformando una red exclusiva de inversionistas y empresarios para incubar el Batch 2026 
             de Boostart Venture Studio: 10 startups creadas desde cero para resolver problemas 
             reales en diferentes industrias de América Latina con Inteligencia Artificial.
           </p>
