@@ -6,8 +6,8 @@ import { MessageCircle, FileText, Calendar } from "lucide-react"
 export function Hero() {
   return (
     <>
-      {/* Logo Bar - White Background */}
-      <div className="bg-white py-6 sm:py-8 px-6 sm:px-8">
+      {/* Logo Bar */}
+      <div className="bg-oxford-blue py-6 sm:py-8 px-6 sm:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <img 
             src="/images/logo-boostart.jpg" 
