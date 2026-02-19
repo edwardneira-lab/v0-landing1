@@ -6,14 +6,14 @@ import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
 const gantari = Gantari({ 
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: '--font-gantari',
   display: 'swap',
 });
 
 const abel = Abel({ 
   weight: '400',
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: '--font-abel',
   display: 'swap',
 });
