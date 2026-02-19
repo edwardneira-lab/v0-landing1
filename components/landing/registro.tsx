@@ -18,7 +18,7 @@ interface Registration {
   timestamp: string
 }
 
-const HEADING_TEXT = "Reg\u00EDstrate para m\u00E1s informaci\u00F3n, te contactaremos"
+const HEADING_TEXT = "Reg\u00EDstrate, te contactaremos"
 
 export function Registro() {
   const [formData, setFormData] = useState({
