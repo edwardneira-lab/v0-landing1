@@ -18,6 +18,8 @@ interface Registration {
   timestamp: string
 }
 
+const HEADING_TEXT = "Reg\u00EDstrate para m\u00E1s informaci\u00F3n, te contactaremos"
+
 export function Registro() {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -32,19 +34,19 @@ export function Registro() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     const newRegistration: Registration = {
       ...formData,
-      timestamp: new Date().toLocaleString('es-ES')
+      timestamp: new Date().toLocaleString("es-ES"),
     }
-    
+
     setRegistrations([...registrations, newRegistration])
-    
+
     toast({
       title: "Registro exitoso",
-      description: "Te contactaremos en menos de 48 horas con información del Investor Briefing.",
+      description: "Te contactaremos en menos de 48 horas con informaci\u00F3n del Investor Briefing.",
     })
-    
+
     setFormData({
       nombre: "",
       email: "",
@@ -60,7 +62,7 @@ export function Registro() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-oxford-blue mb-6">
-            {"Regístrate para más información, te contactaremos"}
+            {HEADING_TEXT}
           </h2>
         </div>
 
@@ -97,7 +99,7 @@ export function Registro() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="telefono" className="text-oxford-blue">Teléfono</Label>
+                    <Label htmlFor="telefono" className="text-oxford-blue">{"Tel\u00E9fono"}</Label>
                     <Input
                       id="telefono"
                       type="tel"
@@ -124,7 +126,7 @@ export function Registro() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="pais" className="text-oxford-blue">País</Label>
+                    <Label htmlFor="pais" className="text-oxford-blue">{"Pa\u00EDs"}</Label>
                     <Input
                       id="pais"
                       value={formData.pais}
@@ -145,8 +147,8 @@ export function Registro() {
                   </div>
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   size="lg"
                   className="w-full bg-caribbean-green text-oxford-blue hover:bg-caribbean-green/90 font-semibold"
                 >
@@ -156,13 +158,12 @@ export function Registro() {
 
                 <p className="text-sm text-pine-green text-center flex items-center justify-center gap-2">
                   <Shield className="h-4 w-4" />
-                  Tu información es confidencial. Te contactaremos en menos de 48 horas.
+                  {"Tu informaci\u00F3n es confidencial. Te contactaremos en menos de 48 horas."}
                 </p>
               </form>
             </CardContent>
           </Card>
 
-          {/* Mock registrations table */}
           {registrations.length > 0 && (
             <Card className="mt-8 border-light-cyan">
               <CardHeader>
@@ -175,7 +176,7 @@ export function Registro() {
                       <tr className="border-b border-light-cyan">
                         <th className="text-left py-2 text-oxford-blue font-semibold">Nombre</th>
                         <th className="text-left py-2 text-oxford-blue font-semibold">Email</th>
-                        <th className="text-left py-2 text-oxford-blue font-semibold">Teléfono</th>
+                        <th className="text-left py-2 text-oxford-blue font-semibold">{"Tel\u00E9fono"}</th>
                         <th className="text-left py-2 text-oxford-blue font-semibold">Ciudad</th>
                       </tr>
                     </thead>
