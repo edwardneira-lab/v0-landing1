@@ -157,6 +157,7 @@ export function Eventos() {
                   src={evento.imagen}
                   alt={`Skyline de ${evento.ciudad}`}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1333] via-[#0D1333]/40 to-transparent" />

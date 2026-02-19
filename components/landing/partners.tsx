@@ -1,15 +1,13 @@
 const partners = [
   { name: "AngelHub", logo: "/images/partners/angelhub.jpg" },
-  { name: "Google for Startups", logo: "/images/partners/google-startups.jpg" },
-  { name: "Startti", logo: "/images/partners/startti.jpg" },
-  { name: "Arkangeles", logo: "/images/partners/arkangeles.jpg" },
-  { name: "Startuplinks", logo: "/images/partners/startuplinks.jpg" },
-  { name: "Pygma", logo: "/images/partners/pygma.jpg" },
-  { name: "BVC", logo: "/images/partners/bvc.jpg" },
-  { name: "Wandr", logo: "/images/partners/wandr.jpg" },
-  { name: "Uniandinos", logo: "/images/partners/uniandinos.jpg" },
-  { name: "Tecnológico de Monterrey", logo: "/images/partners/tec-monterrey.jpg" },
   { name: "Founder Institute", logo: "/images/partners/founder-institute.jpg" },
+  { name: "Uniandinos", logo: "/images/partners/uniandinos.jpg" },
+  { name: "BVC", logo: "/images/partners/bvc.jpg" },
+  { name: "Google for Startups", logo: "/images/partners/google-startups.jpg" },
+  { name: "Tecnológico de Monterrey", logo: "/images/partners/tec-monterrey.jpg" },
+  { name: "Startuplinks", logo: "/images/partners/startuplinks.jpg" },
+  { name: "Startti", logo: "/images/partners/startti.jpg" },
+  { name: "Wandr", logo: "/images/partners/wandr.jpg" },
 ]
 
 export function Partners() {
