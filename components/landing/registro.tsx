@@ -61,12 +61,8 @@ export function Registro() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-oxford-blue mb-6">
-            Unete a la Red de Ángeles Boostart 2026
+            {"Regístrate para más información, te contactaremos"}
           </h2>
-          <p className="text-pine-green text-lg leading-relaxed">
-            Recibe acceso prioritario al deal flow del Batch 2026, briefings privados 
-            y eventos exclusivos para inversionistas.
-          </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
