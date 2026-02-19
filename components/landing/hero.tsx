@@ -31,8 +31,10 @@ export function Hero() {
           <div className="text-center max-w-4xl mx-auto">
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-10 text-balance">
-            <span className="text-caribbean-green">Boostart</span> Batch 2026
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-8 sm:mb-10 text-balance leading-tight">
+            {'Unete al batch 2026 de '}
+            <span className="text-caribbean-green">Boostart</span>
+            {' \u2014 En Vivo en tu ciudad'}
           </h1>
 
           {/* Description */}
