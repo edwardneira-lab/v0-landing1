@@ -1,11 +1,11 @@
 const partners = [
   { name: "AngelHub", logo: "/images/partners/angelhub.jpg" },
-  { name: "Founder Institute", logo: "/images/partners/founder-institute.jpg" },
-  { name: "Uniandinos", logo: "/images/partners/uniandinos.jpg" },
-  { name: "BVC", logo: "/images/partners/bvc.jpg" },
   { name: "Google for Startups", logo: "/images/partners/google-startups.jpg" },
-  { name: "Tecnológico de Monterrey", logo: "/images/partners/tec-monterrey.jpg" },
   { name: "Startuplinks", logo: "/images/partners/startuplinks.jpg" },
+  { name: "Founder Institute", logo: "/images/partners/founder-institute.jpg" },
+  { name: "BVC", logo: "/images/partners/bvc.jpg" },
+  { name: "Uniandinos", logo: "/images/partners/uniandinos.jpg" },
+  { name: "Tecnológico de Monterrey", logo: "/images/partners/tec-monterrey.jpg" },
   { name: "Startti", logo: "/images/partners/startti.jpg" },
   { name: "Wandr", logo: "/images/partners/wandr.jpg" },
 ]
@@ -19,7 +19,7 @@ export function Partners() {
         </h2>
 
         {/* Static Logo Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 sm:gap-10 items-center justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 sm:gap-10 items-center justify-items-center max-w-4xl mx-auto">
           {partners.map((partner, index) => (
             <div
               key={index}
