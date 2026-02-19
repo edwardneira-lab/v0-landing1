@@ -179,15 +179,14 @@ export function Eventos() {
                 <div className="flex items-center gap-2 mb-1">
                   <Calendar className="h-3.5 w-3.5 text-light-cyan/40 flex-shrink-0" />
                   <span className="text-light-cyan/60 text-sm">
-                    {evento.dia ? `${evento.fecha} - ${evento.dia}` : evento.fecha}
+                    {[evento.fecha, evento.dia].filter(Boolean).join(" - ")}
                   </span>
                 </div>
 
                 {/* Hour */}
-                {evento.hora && (
-                  <span className="text-light-cyan/50 text-xs ml-6 mb-5">{evento.hora}</span>
-                )}
-                {!evento.hora && <div className="mb-5" />}
+                <span className={"text-light-cyan/50 text-xs ml-6 mb-5" + (evento.hora ? "" : " invisible")}>
+                  {evento.hora || "\u00A0"}
+                </span>
 
                 {/* CTA Button */}
                 <div className="mt-auto">
