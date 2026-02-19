@@ -20,6 +20,7 @@ const eventos = [
     titulo: "Investor MeetUp - Bogotá",
     tipo: "presencial",
     imagen: "/images/events/bogota.jpg",
+    link: "https://luma.com/kz3aay3a",
   },
   {
     fecha: "Mar 5",
@@ -190,13 +191,25 @@ export function Eventos() {
 
                 {/* CTA Button */}
                 <div className="mt-auto">
-                  <button
-                    onClick={() => setSelectedEvent(evento)}
-                    className="w-full flex items-center justify-between gap-2 rounded-xl border border-caribbean-green text-caribbean-green px-4 py-3 text-sm font-semibold transition-all duration-300 hover:bg-caribbean-green hover:text-oxford-blue group/btn"
-                  >
-                    <span>Registro</span>
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                  </button>
+                  {"link" in evento && evento.link ? (
+                    <a
+                      href={evento.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-between gap-2 rounded-xl border border-caribbean-green text-caribbean-green px-4 py-3 text-sm font-semibold transition-all duration-300 hover:bg-caribbean-green hover:text-oxford-blue group/btn"
+                    >
+                      <span>Registro</span>
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => setSelectedEvent(evento)}
+                      className="w-full flex items-center justify-between gap-2 rounded-xl border border-caribbean-green text-caribbean-green px-4 py-3 text-sm font-semibold transition-all duration-300 hover:bg-caribbean-green hover:text-oxford-blue group/btn"
+                    >
+                      <span>Registro</span>
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
