@@ -11,9 +11,7 @@ export function FinalCTA() {
           Haz parte de la próxima generación de startups de IA en América Latina.
         </h2>
         <p className="text-white/80 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-          Boostart está construyendo 10 compañías desde cero para el Batch 2026. 
-          Súmate como inversionista ángel y participa desde el inicio en un portafolio 
-          diseñado para lograr tracción y exit temprano.
+          {"Boostart está construyendo 10 compañías desde cero para el Batch 2026. Participa desde el inicio en un portafolio diseñado para lograr tracción y exit temprano."}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
