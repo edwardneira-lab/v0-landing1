@@ -19,41 +19,77 @@ const eventos = [
     pais: "Colombia",
     titulo: "Investor MeetUp - Bogotá",
     tipo: "presencial",
-    lugar: "Distrito Financiero / Club Privado",
     imagen: "/images/events/bogota.jpg",
   },
   {
-    fecha: "Mar 4",
-    dia: "Miércoles",
+    fecha: "Mar 5",
+    dia: "Jueves",
     hora: "6:00 pm COL",
     ciudad: "Pereira",
     pais: "Colombia",
     titulo: "Investor MeetUp - Pereira",
     tipo: "presencial",
-    lugar: "Espacio Privado de Inversión",
     imagen: "/images/events/pereira.jpg",
+  },
+  {
+    fecha: "Mar 3",
+    dia: "Martes",
+    hora: "6:00 pm COL / 5:00 pm CDMX",
+    ciudad: "Online",
+    pais: "Virtual",
+    titulo: "Investor MeetUp - Online",
+    tipo: "online",
+    imagen: "/images/events/online.jpg",
   },
   {
     fecha: "Mar 25",
     dia: "Miércoles",
-    hora: "5:00 pm MX",
+    hora: "6:00 pm CDMX",
     ciudad: "Monterrey",
     pais: "México",
     titulo: "Investor MeetUp - Monterrey",
     tipo: "presencial",
-    lugar: "Club Empresarial Privado",
     imagen: "/images/events/monterrey.jpg",
   },
   {
-    fecha: "Apr 2",
-    dia: "Jueves",
-    hora: "5:00 pm MX",
-    ciudad: "Ciudad de México",
+    fecha: "Abr 1",
+    dia: "Miércoles",
+    hora: "6:00 pm CDMX",
+    ciudad: "CDMX",
     pais: "México",
-    titulo: "Investor MeetUp - Ciudad de México",
+    titulo: "Investor MeetUp - CDMX",
     tipo: "presencial",
-    lugar: "Hub de Inversión Partner",
     imagen: "/images/events/cdmx.jpg",
+  },
+  {
+    fecha: "Abr 15",
+    dia: "Miércoles",
+    hora: "6:00 pm COL",
+    ciudad: "Medellín",
+    pais: "Colombia",
+    titulo: "Investor MeetUp - Medellín",
+    tipo: "presencial",
+    imagen: "/images/events/medellin.jpg",
+  },
+  {
+    fecha: "Por confirmar",
+    dia: "",
+    hora: "",
+    ciudad: "Lima",
+    pais: "Perú",
+    titulo: "Investor MeetUp - Lima",
+    tipo: "presencial",
+    imagen: "/images/events/lima.jpg",
+  },
+  {
+    fecha: "Por confirmar",
+    dia: "",
+    hora: "",
+    ciudad: "Miami",
+    pais: "USA",
+    titulo: "Investor MeetUp - Miami",
+    tipo: "presencial",
+    imagen: "/images/events/miami.jpg",
   },
 ]
 
@@ -142,11 +178,16 @@ export function Eventos() {
                 {/* Date */}
                 <div className="flex items-center gap-2 mb-1">
                   <Calendar className="h-3.5 w-3.5 text-light-cyan/40 flex-shrink-0" />
-                  <span className="text-light-cyan/60 text-sm">{evento.fecha} - {evento.dia}</span>
+                  <span className="text-light-cyan/60 text-sm">
+                    {evento.dia ? `${evento.fecha} - ${evento.dia}` : evento.fecha}
+                  </span>
                 </div>
 
                 {/* Hour */}
-                <span className="text-light-cyan/50 text-xs ml-6 mb-5">{evento.hora}</span>
+                {evento.hora && (
+                  <span className="text-light-cyan/50 text-xs ml-6 mb-5">{evento.hora}</span>
+                )}
+                {!evento.hora && <div className="mb-5" />}
 
                 {/* CTA Button */}
                 <div className="mt-auto">
