@@ -51,13 +51,6 @@ export function Hero() {
             reales en diferentes industrias de América Latina con Inteligencia Artificial.
           </p>
 
-          {/* Strong statement */}
-          <p className="text-white text-base sm:text-lg font-semibold mb-12 sm:mb-14 max-w-3xl mx-auto border-l-4 border-caribbean-green pl-4 sm:pl-6 text-left">
-            No invertimos en ideas. Construimos compañías sólidas, con producto funcional, 
-            que gracias a las ventajas injustas de sus founders nazcan con clientes reales 
-            y ventas escalables.
-          </p>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button
