@@ -28,10 +28,8 @@ export function Hero() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-8 sm:mb-10 text-balance leading-tight">
+          {/* Headline - full width */}
+          <h1 className="text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.5rem] font-extrabold mb-8 sm:mb-10 leading-[1.1] tracking-tight">
             <span className="bg-gradient-to-r from-white via-white to-[#7DFBC3] bg-clip-text text-transparent">
               {'Unete al batch 2026 de '}
             </span>
@@ -40,9 +38,11 @@ export function Hero() {
             </span>
             <br />
             <span className="bg-gradient-to-r from-[#7DFBC3] via-white to-white bg-clip-text text-transparent">
-              {' \u2014 En Vivo en tu ciudad'}
+              {'\u2014 En Vivo en tu ciudad'}
             </span>
           </h1>
+
+          <div className="text-center max-w-4xl mx-auto">
 
           {/* Description */}
           <p className="text-white/80 text-base sm:text-lg mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
