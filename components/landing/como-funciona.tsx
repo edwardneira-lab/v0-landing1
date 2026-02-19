@@ -11,48 +11,13 @@ import {
 } from "lucide-react"
 
 const benefits = [
-  {
-    icon: TrendingUp,
-    title: "Valoraciones altamente atractivas",
-    description:
-      "Accede a startups en etapas tempranas con multiplos de entrada preferenciales y mayor potencial de valorizacion frente a rondas posteriores.",
-  },
-  {
-    icon: Target,
-    title: "Startups diseñadas para exit",
-    description:
-      "Las companias son construidas desde su origen con logica de adquisicion, maximizando probabilidades de liquidez en horizontes mas cortos.",
-  },
-  {
-    icon: Users,
-    title: "Acompañamiento de un experto en VC",
-    description:
-      "Boostart estructura, co-construye y acelera las startups, permitiendote invertir en venture capital con acompanamiento operativo y estrategico.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovación como ventaja estratégica",
-    description:
-      "Mas que invertir capital, accedes a tendencias, tecnologias y modelos que pueden fortalecer y transformar tu negocio principal.",
-  },
-  {
-    icon: Rocket,
-    title: "Startups que redefinen las industrias",
-    description:
-      "Participa en startups que resuelven necesidades reales de sectores tradicionales mediante tecnologia e inteligencia artificial.",
-  },
-  {
-    icon: Brain,
-    title: "Exposición a la economía IA",
-    description:
-      "Forma parte activa del cambio tecnologico que esta reconfigurando mercados, modelos de negocio y ventajas competitivas globales.",
-  },
-  {
-    icon: KeyRound,
-    title: "Dealflow preferencial Boostart",
-    description:
-      "Recibe oportunidades de inversion originadas, filtradas y estructuradas directamente por el ecosistema Boostart.",
-  },
+  { icon: TrendingUp, title: "Valoraciones altamente atractivas" },
+  { icon: Target, title: "Startups diseñadas para exit" },
+  { icon: Users, title: "Acompañamiento de un experto en VC" },
+  { icon: Lightbulb, title: "Innovación como ventaja estratégica" },
+  { icon: Rocket, title: "Startups que redefinen las industrias" },
+  { icon: Brain, title: "Exposición a la economía IA" },
+  { icon: KeyRound, title: "Dealflow preferencial Boostart" },
 ]
 
 export function ComoFunciona() {
@@ -82,12 +47,9 @@ export function ComoFunciona() {
                 <item.icon className="h-6 w-6 text-caribbean-green" />
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 leading-snug pr-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white leading-snug pr-6">
                 {item.title}
               </h3>
-              <p className="text-light-cyan/70 text-sm sm:text-base leading-relaxed">
-                {item.description}
-              </p>
             </div>
           ))}
         </div>
@@ -107,12 +69,9 @@ export function ComoFunciona() {
                 <item.icon className="h-6 w-6 text-caribbean-green" />
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 leading-snug pr-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white leading-snug pr-6">
                 {item.title}
               </h3>
-              <p className="text-light-cyan/70 text-sm sm:text-base leading-relaxed">
-                {item.description}
-              </p>
             </div>
           ))}
         </div>
@@ -132,12 +91,9 @@ export function ComoFunciona() {
                 <item.icon className="h-6 w-6 text-caribbean-green" />
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 leading-snug pr-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white leading-snug pr-6">
                 {item.title}
               </h3>
-              <p className="text-light-cyan/70 text-sm sm:text-base leading-relaxed">
-                {item.description}
-              </p>
             </div>
           ))}
         </div>
