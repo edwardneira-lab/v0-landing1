@@ -129,8 +129,20 @@ export function Eventos() {
   }
 
   return (
-    <section id="eventos" className="pt-0 pb-20 sm:pb-28 bg-oxford-blue">
+    <section id="eventos" className="py-20 sm:py-28 bg-oxford-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <span className="inline-block text-caribbean-green text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4">
+            Eventos Exclusivos
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
+            {"Participa en nuestros próximos eventos"}
+          </h2>
+          <p className="text-light-cyan/70 text-base sm:text-lg leading-relaxed">
+            {"Estamos realizando una serie de encuentros exclusivos para empresarios e inversionistas que deseen conocer nuestro Batch 2026."}
+          </p>
+        </div>
 
         {/* Event cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
