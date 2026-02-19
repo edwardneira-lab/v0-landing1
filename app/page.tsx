@@ -1,5 +1,6 @@
 import { Hero } from "@/components/landing/hero"
 import { Tesis } from "@/components/landing/tesis"
+import { ComoFunciona } from "@/components/landing/como-funciona"
 import { AngelHub } from "@/components/landing/angelhub"
 import { Eventos } from "@/components/landing/eventos"
 import { Partners } from "@/components/landing/partners"
@@ -12,9 +13,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Eventos />
       <Tesis />
+      <ComoFunciona />
       <AngelHub />
+      <Eventos />
       <Partners />
       <Registro />
       <FinalCTA />
