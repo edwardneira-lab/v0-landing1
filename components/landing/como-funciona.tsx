@@ -13,43 +13,43 @@ import {
 const benefits = [
   {
     icon: TrendingUp,
-    title: "Invierte a valoraciones de entrada altamente atractivas",
+    title: "Valoraciones altamente atractivas",
     description:
       "Accede a startups en etapas tempranas con multiplos de entrada preferenciales y mayor potencial de valorizacion frente a rondas posteriores.",
   },
   {
     icon: Target,
-    title: "Accede a startups disenadas para exit temprano",
+    title: "Startups diseñadas para exit",
     description:
       "Las companias son construidas desde su origen con logica de adquisicion, maximizando probabilidades de liquidez en horizontes mas cortos.",
   },
   {
     icon: Users,
-    title: "Entra al Venture Capital acompanado por un partner experto",
+    title: "Acompañamiento de un experto en VC",
     description:
       "Boostart estructura, co-construye y acelera las startups, permitiendote invertir en venture capital con acompanamiento operativo y estrategico.",
   },
   {
     icon: Lightbulb,
-    title: "Convierte la innovacion en una ventaja estrategica",
+    title: "Innovación como ventaja estratégica",
     description:
       "Mas que invertir capital, accedes a tendencias, tecnologias y modelos que pueden fortalecer y transformar tu negocio principal.",
   },
   {
     icon: Rocket,
-    title: "Invierte en companias que estan redefiniendo tu industria",
+    title: "Startups que redefinen las industrias",
     description:
       "Participa en startups que resuelven necesidades reales de sectores tradicionales mediante tecnologia e inteligencia artificial.",
   },
   {
     icon: Brain,
-    title: "Acompana la transicion hacia la economia impulsada por IA",
+    title: "Exposición a la economía IA",
     description:
       "Forma parte activa del cambio tecnologico que esta reconfigurando mercados, modelos de negocio y ventajas competitivas globales.",
   },
   {
     icon: KeyRound,
-    title: "Acceso preferencial al dealflow del Venture Studio",
+    title: "Dealflow preferencial Boostart",
     description:
       "Recibe oportunidades de inversion originadas, filtradas y estructuradas directamente por el ecosistema Boostart.",
   },
