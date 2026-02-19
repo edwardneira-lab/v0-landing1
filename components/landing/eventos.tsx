@@ -12,23 +12,12 @@ import { Calendar, MapPin, Monitor, Users, ArrowRight } from "lucide-react"
 
 const eventos = [
   {
-    fecha: "Feb 19",
-    dia: "Miércoles",
-    ciudad: "Online",
-    pais: "Virtual",
-    titulo: "Investor MeetUp - Online",
-    cta: "Registrarme Online",
-    tipo: "online",
-    lugar: "Evento online",
-    imagen: "/images/events/online.jpg",
-  },
-  {
     fecha: "Feb 26",
     dia: "Jueves",
+    hora: "6:00 pm COL",
     ciudad: "Bogotá",
     pais: "Colombia",
     titulo: "Investor MeetUp - Bogotá",
-    cta: "Registrarme en Bogotá",
     tipo: "presencial",
     lugar: "Distrito Financiero / Club Privado",
     imagen: "/images/events/bogota.jpg",
@@ -36,10 +25,10 @@ const eventos = [
   {
     fecha: "Mar 4",
     dia: "Miércoles",
+    hora: "6:00 pm COL",
     ciudad: "Pereira",
     pais: "Colombia",
     titulo: "Investor MeetUp - Pereira",
-    cta: "Registrarme en Pereira",
     tipo: "presencial",
     lugar: "Espacio Privado de Inversión",
     imagen: "/images/events/pereira.jpg",
@@ -47,10 +36,10 @@ const eventos = [
   {
     fecha: "Mar 25",
     dia: "Miércoles",
+    hora: "5:00 pm MX",
     ciudad: "Monterrey",
     pais: "México",
     titulo: "Investor MeetUp - Monterrey",
-    cta: "Registrarme en Monterrey",
     tipo: "presencial",
     lugar: "Club Empresarial Privado",
     imagen: "/images/events/monterrey.jpg",
@@ -58,10 +47,10 @@ const eventos = [
   {
     fecha: "Apr 2",
     dia: "Jueves",
+    hora: "5:00 pm MX",
     ciudad: "Ciudad de México",
     pais: "México",
     titulo: "Investor MeetUp - Ciudad de México",
-    cta: "Registrarme en CDMX",
     tipo: "presencial",
     lugar: "Hub de Inversión Partner",
     imagen: "/images/events/cdmx.jpg",
@@ -112,7 +101,7 @@ export function Eventos() {
         </div>
 
         {/* Event cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {eventos.map((evento, index) => (
             <div
               key={index}
@@ -151,18 +140,16 @@ export function Eventos() {
                 <span className="text-light-cyan/50 text-sm ml-6 mb-4">{evento.pais}</span>
 
                 {/* Date */}
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-1">
                   <Calendar className="h-3.5 w-3.5 text-light-cyan/40 flex-shrink-0" />
                   <span className="text-light-cyan/60 text-sm">{evento.fecha} - {evento.dia}</span>
                 </div>
 
-                {/* Venue */}
-                <p className="text-light-cyan/60 text-sm mb-1">{evento.lugar}</p>
+                {/* Hour */}
+                <span className="text-light-cyan/50 text-xs ml-6 mb-3">{evento.hora}</span>
 
-                {/* Session type label */}
-                <span className="text-caribbean-green text-[10px] font-bold tracking-[0.12em] uppercase mb-5">
-                  {"Sesión privada Red de Inversionistas"}
-                </span>
+                {/* Venue */}
+                <p className="text-light-cyan/60 text-sm mb-5">{evento.lugar}</p>
 
                 {/* CTA Button */}
                 <div className="mt-auto">
@@ -170,7 +157,7 @@ export function Eventos() {
                     onClick={() => setSelectedEvent(evento)}
                     className="w-full flex items-center justify-between gap-2 rounded-xl border border-caribbean-green text-caribbean-green px-4 py-3 text-sm font-semibold transition-all duration-300 hover:bg-caribbean-green hover:text-oxford-blue group/btn"
                   >
-                    <span>{evento.cta}</span>
+                    <span>Registro</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                   </button>
                 </div>
