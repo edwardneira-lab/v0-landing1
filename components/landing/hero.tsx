@@ -51,6 +51,11 @@ export function Hero() {
             reales en diferentes industrias de América Latina con Inteligencia Artificial.
           </p>
 
+          {/* City Selection Title */}
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-10 bg-gradient-to-r from-[#0ADCA5] to-[#7DFBC3] bg-clip-text text-transparent">
+            Elige tu ciudad
+          </h2>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button
