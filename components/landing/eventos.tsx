@@ -42,7 +42,7 @@ const eventos = [
     titulo: "Investor MeetUp - Online",
     tipo: "online",
     imagen: "/images/events/online.jpg",
-    link: "",
+    link: "https://luma.com/c2067kjp",
   },
   {
     fecha: "Mar 25",
