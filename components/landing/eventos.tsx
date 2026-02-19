@@ -1,61 +1,71 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { Calendar, MapPin, Monitor } from "lucide-react"
+import { Calendar, MapPin, Monitor, Users, ArrowRight } from "lucide-react"
 
 const eventos = [
   {
     fecha: "Feb 19",
     dia: "Miércoles",
     ciudad: "Online",
+    pais: "Virtual",
     titulo: "Investor MeetUp - Online",
-    cta: "Register Now",
+    cta: "Registrarme Online",
     tipo: "online",
-    lugar: "Evento online"
+    lugar: "Evento online",
+    imagen: "/images/events/online.jpg",
   },
   {
     fecha: "Feb 26",
     dia: "Jueves",
     ciudad: "Bogotá",
+    pais: "Colombia",
     titulo: "Investor MeetUp - Bogotá",
-    cta: "Register Now",
+    cta: "Registrarme en Bogotá",
     tipo: "presencial",
-    lugar: "Pendiente por definir"
+    lugar: "Distrito Financiero / Club Privado",
+    imagen: "/images/events/bogota.jpg",
   },
   {
     fecha: "Mar 4",
     dia: "Miércoles",
     ciudad: "Pereira",
+    pais: "Colombia",
     titulo: "Investor MeetUp - Pereira",
-    cta: "Register Now",
+    cta: "Registrarme en Pereira",
     tipo: "presencial",
-    lugar: "Pendiente por definir"
+    lugar: "Espacio Privado de Inversión",
+    imagen: "/images/events/pereira.jpg",
   },
   {
     fecha: "Mar 25",
     dia: "Miércoles",
     ciudad: "Monterrey",
+    pais: "México",
     titulo: "Investor MeetUp - Monterrey",
-    cta: "Register Now",
+    cta: "Registrarme en Monterrey",
     tipo: "presencial",
-    lugar: "Pendiente por definir"
+    lugar: "Club Empresarial Privado",
+    imagen: "/images/events/monterrey.jpg",
   },
   {
     fecha: "Apr 2",
     dia: "Jueves",
     ciudad: "Ciudad de México",
+    pais: "México",
     titulo: "Investor MeetUp - Ciudad de México",
-    cta: "Register Now",
+    cta: "Registrarme en CDMX",
     tipo: "presencial",
-    lugar: "Pendiente por definir"
-  }
+    lugar: "Hub de Inversión Partner",
+    imagen: "/images/events/cdmx.jpg",
+  },
 ]
 
 interface EventFormData {
@@ -71,7 +81,7 @@ export function Eventos() {
     nombre: "",
     email: "",
     ciudad: "",
-    ticket: ""
+    ticket: "",
   })
   const { toast } = useToast()
 
@@ -86,119 +96,150 @@ export function Eventos() {
   }
 
   return (
-    <section id="eventos" className="py-24 bg-non-photo-blue">
+    <section id="eventos" className="py-20 sm:py-28 bg-oxford-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-oxford-blue mb-6">
-            Participa en nuestros próximos eventos
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <span className="inline-block text-caribbean-green text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4">
+            Eventos Exclusivos
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 text-balance">
+            {"Participa en nuestros próximos eventos"}
           </h2>
-          <p className="text-pine-green text-lg leading-relaxed">
-            Estamos realizando una serie de encuentros exclusivos para empresarios e inversionistas
-            que deseen conocer nuestro Batch 2026.
+          <p className="text-light-cyan/70 text-base sm:text-lg leading-relaxed">
+            {"Estamos realizando una serie de encuentros exclusivos para empresarios e inversionistas que deseen conocer nuestro Batch 2026."}
           </p>
         </div>
 
-        <div className="space-y-4">
+        {/* Event cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {eventos.map((evento, index) => (
-            <Card 
-              key={index} 
-              className="bg-white border-light-cyan hover:shadow-lg transition-all duration-300"
+            <div
+              key={index}
+              className="group relative flex flex-col rounded-2xl overflow-hidden border border-pine-green/20 bg-[#0D1333] transition-all duration-300 hover:border-caribbean-green/40 hover:shadow-[0_0_32px_rgba(10,220,165,0.1)]"
             >
-              <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-20 h-24 bg-oxford-blue rounded-xl flex flex-col items-center justify-center text-white">
-                      <Calendar className="h-4 w-4 mb-1" />
-                      <span className="text-sm font-bold">{evento.fecha}</span>
-                      <span className="text-xs text-light-cyan">{evento.dia}</span>
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 text-pine-green text-sm mb-1">
-                        {evento.tipo === "online" ? (
-                          <Monitor className="h-4 w-4" />
-                        ) : (
-                          <MapPin className="h-4 w-4" />
-                        )}
-                        {evento.ciudad}
-                      </div>
-                      <h3 className="text-lg font-bold text-oxford-blue">{evento.titulo}</h3>
-                      <p className="text-pine-green text-sm mt-1">Hora: 6 pm Colombia / 5 pm CDMX</p>
-                      <p className="text-pine-green text-sm">Lugar: {evento.lugar}</p>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => setSelectedEvent(evento)}
-                    className="bg-caribbean-green text-oxford-blue hover:bg-caribbean-green/90 font-semibold"
-                  >
-                    {evento.cta}
-                  </Button>
+              {/* City image */}
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={evento.imagen}
+                  alt={`Skyline de ${evento.ciudad}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1333] via-[#0D1333]/40 to-transparent" />
+
+                {/* Badge */}
+                <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-[#0D1333]/80 backdrop-blur-sm border border-caribbean-green/40 rounded-full px-3 py-1">
+                  <Users className="h-3 w-3 text-caribbean-green" />
+                  <span className="text-caribbean-green text-[10px] font-bold tracking-wider uppercase">
+                    Cupos Limitados
+                  </span>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col flex-1 p-5">
+                {/* City + Country */}
+                <div className="flex items-center gap-2 mb-1">
+                  {evento.tipo === "online" ? (
+                    <Monitor className="h-4 w-4 text-caribbean-green flex-shrink-0" />
+                  ) : (
+                    <MapPin className="h-4 w-4 text-caribbean-green flex-shrink-0" />
+                  )}
+                  <h3 className="text-xl font-bold text-white leading-tight">{evento.ciudad}</h3>
+                </div>
+                <span className="text-light-cyan/50 text-sm ml-6 mb-4">{evento.pais}</span>
+
+                {/* Date */}
+                <div className="flex items-center gap-2 mb-2">
+                  <Calendar className="h-3.5 w-3.5 text-light-cyan/40 flex-shrink-0" />
+                  <span className="text-light-cyan/60 text-sm">{evento.fecha} - {evento.dia}</span>
+                </div>
+
+                {/* Venue */}
+                <p className="text-light-cyan/60 text-sm mb-1">{evento.lugar}</p>
+
+                {/* Session type label */}
+                <span className="text-caribbean-green text-[10px] font-bold tracking-[0.12em] uppercase mb-5">
+                  {"Sesión privada Red de Inversionistas"}
+                </span>
+
+                {/* CTA Button */}
+                <div className="mt-auto">
+                  <button
+                    onClick={() => setSelectedEvent(evento)}
+                    className="w-full flex items-center justify-between gap-2 rounded-xl border border-caribbean-green text-caribbean-green px-4 py-3 text-sm font-semibold transition-all duration-300 hover:bg-caribbean-green hover:text-oxford-blue group/btn"
+                  >
+                    <span>{evento.cta}</span>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                  </button>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
       {/* Event Registration Modal */}
       <Dialog open={!!selectedEvent} onOpenChange={() => setSelectedEvent(null)}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md bg-[#0D1333] border-pine-green/30">
           <DialogHeader>
-            <DialogTitle className="text-oxford-blue">Registro para evento</DialogTitle>
-            <DialogDescription className="text-pine-green">
+            <DialogTitle className="text-white">Registro para evento</DialogTitle>
+            <DialogDescription className="text-light-cyan/60">
               {selectedEvent?.titulo}
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="event-nombre" className="text-oxford-blue">Nombre completo</Label>
+              <Label htmlFor="event-nombre" className="text-light-cyan/80">Nombre completo</Label>
               <Input
                 id="event-nombre"
                 value={formData.nombre}
                 onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                 required
-                className="border-light-cyan focus:border-caribbean-green"
+                className="bg-oxford-blue border-pine-green/30 text-white placeholder:text-light-cyan/30 focus:border-caribbean-green"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="event-email" className="text-oxford-blue">Email</Label>
+              <Label htmlFor="event-email" className="text-light-cyan/80">Email</Label>
               <Input
                 id="event-email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className="border-light-cyan focus:border-caribbean-green"
+                className="bg-oxford-blue border-pine-green/30 text-white placeholder:text-light-cyan/30 focus:border-caribbean-green"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="event-ciudad" className="text-oxford-blue">Ciudad</Label>
+              <Label htmlFor="event-ciudad" className="text-light-cyan/80">Ciudad</Label>
               <Input
                 id="event-ciudad"
                 value={formData.ciudad}
                 onChange={(e) => setFormData({ ...formData, ciudad: e.target.value })}
                 required
-                className="border-light-cyan focus:border-caribbean-green"
+                className="bg-oxford-blue border-pine-green/30 text-white placeholder:text-light-cyan/30 focus:border-caribbean-green"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="event-ticket" className="text-oxford-blue">Ticket estimado de inversión</Label>
+              <Label htmlFor="event-ticket" className="text-light-cyan/80">{"Ticket estimado de inversión"}</Label>
               <Select
                 value={formData.ticket}
                 onValueChange={(value) => setFormData({ ...formData, ticket: value })}
               >
-                <SelectTrigger className="border-light-cyan focus:border-caribbean-green">
+                <SelectTrigger className="bg-oxford-blue border-pine-green/30 text-white focus:border-caribbean-green">
                   <SelectValue placeholder="Selecciona un rango" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="5k-10k">USD 5k–10k</SelectItem>
-                  <SelectItem value="10k-25k">USD 10k–25k</SelectItem>
-                  <SelectItem value="25k-50k">USD 25k–50k</SelectItem>
-                  <SelectItem value="50k+">USD 50k+</SelectItem>
+                <SelectContent className="bg-oxford-blue border-pine-green/30">
+                  <SelectItem value="5k-10k">{"USD 5k\u201310k"}</SelectItem>
+                  <SelectItem value="10k-25k">{"USD 10k\u201325k"}</SelectItem>
+                  <SelectItem value="25k-50k">{"USD 25k\u201350k"}</SelectItem>
+                  <SelectItem value="50k+">{"USD 50k+"}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full bg-caribbean-green text-oxford-blue hover:bg-caribbean-green/90 font-semibold"
             >
               Confirmar registro
