@@ -42,6 +42,7 @@ const eventos = [
     titulo: "Investor MeetUp - Online",
     tipo: "online",
     imagen: "/images/events/online.jpg",
+    link: "",
   },
   {
     fecha: "Mar 25",
@@ -74,6 +75,7 @@ const eventos = [
     titulo: "Investor MeetUp - Medellín",
     tipo: "presencial",
     imagen: "/images/events/medellin.jpg",
+    link: "",
   },
   {
     fecha: "Por confirmar",
@@ -84,6 +86,7 @@ const eventos = [
     titulo: "Investor MeetUp - Lima",
     tipo: "presencial",
     imagen: "/images/events/lima.jpg",
+    link: "",
   },
   {
     fecha: "Por confirmar",
@@ -94,6 +97,7 @@ const eventos = [
     titulo: "Investor MeetUp - Miami",
     tipo: "presencial",
     imagen: "/images/events/miami.jpg",
+    link: "",
   },
 ]
 
@@ -194,7 +198,7 @@ export function Eventos() {
 
                 {/* CTA Button */}
                 <div className="mt-auto">
-                  {"link" in evento && evento.link ? (
+                  {evento.link ? (
                     <a
                       href={evento.link}
                       target="_blank"
