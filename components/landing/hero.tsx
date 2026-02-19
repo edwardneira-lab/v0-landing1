@@ -31,10 +31,17 @@ export function Hero() {
           <div className="text-center max-w-4xl mx-auto">
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-8 sm:mb-10 text-balance leading-tight">
-            {'Unete al batch 2026 de '}
-            <span className="text-caribbean-green">Boostart</span>
-            {' \u2014 En Vivo en tu ciudad'}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-8 sm:mb-10 text-balance leading-tight">
+            <span className="bg-gradient-to-r from-white via-white to-[#7DFBC3] bg-clip-text text-transparent">
+              {'Unete al batch 2026 de '}
+            </span>
+            <span className="bg-gradient-to-r from-[#0ADCA5] to-[#7DFBC3] bg-clip-text text-transparent">
+              Boostart
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-[#7DFBC3] via-white to-white bg-clip-text text-transparent">
+              {' \u2014 En Vivo en tu ciudad'}
+            </span>
           </h1>
 
           {/* Description */}
