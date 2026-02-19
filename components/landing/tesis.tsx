@@ -14,7 +14,7 @@ const phases = [
   {
     phase: 2,
     icon: TrendingUp,
-    title: "Traccion",
+    title: "Tracci\u00f3n",
     duration: "Mes 11 - Mes 24",
     description:
       "Aceleracion de las ventas con un producto que se ajusta rapidamente en cada nueva iteracion.",
