@@ -90,7 +90,7 @@ export function ComoFunciona() {
             Red de Inversionistas
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-0 text-balance leading-tight">
-            {"¿Por qué hacer parte de la Red de Inversionistas Boostart?"}
+            {"¿Por qué invertir e incubar el Batch 2026 de Boostart?"}
           </h2>
         </div>
 
