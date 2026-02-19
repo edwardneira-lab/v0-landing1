@@ -52,6 +52,7 @@ const eventos = [
     titulo: "Investor MeetUp - Monterrey",
     tipo: "presencial",
     imagen: "/images/events/monterrey.jpg",
+    link: "https://luma.com/qrlzhyrd",
   },
   {
     fecha: "Abr 1",
