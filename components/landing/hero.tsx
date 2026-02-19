@@ -1,7 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { MessageCircle, FileText, Calendar } from "lucide-react"
+
 
 export function Hero() {
   return (
@@ -17,7 +16,7 @@ export function Hero() {
         </div>
       </div>
 
-      <section className="relative min-h-[calc(100vh-120px)] bg-oxford-blue py-16 sm:py-20 flex items-center">
+      <section className="relative bg-oxford-blue pt-16 sm:pt-20 pb-10 sm:pb-14 flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -51,44 +50,9 @@ export function Hero() {
             </p>
 
             {/* City Selection Title */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-8 sm:mb-10 bg-gradient-to-r from-[#0ADCA5] to-[#7DFBC3] bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-[#0ADCA5] to-[#7DFBC3] bg-clip-text text-transparent">
               Elige tu ciudad
             </h2>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <Button
-                size="lg"
-                className="bg-caribbean-green text-oxford-blue hover:bg-caribbean-green/90 font-semibold text-base px-6"
-                asChild
-              >
-                <a href="https://wa.me/573214692966" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Hablar por WhatsApp
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                className="bg-white text-oxford-blue hover:bg-white/90 font-semibold text-base px-6"
-                asChild
-              >
-                <a href="#registro">
-                  <FileText className="mr-2 h-5 w-5" />
-                  Registrarme
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-caribbean-green text-caribbean-green hover:bg-caribbean-green/10 font-semibold text-base px-6 bg-transparent"
-                asChild
-              >
-                <a href="#eventos">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Ver próximos eventos
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

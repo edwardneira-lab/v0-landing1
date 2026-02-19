@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Eventos />
       <Tesis />
       <ComoFunciona />
       <AngelHub />
-      <Eventos />
       <Partners />
       <Registro />
       <FinalCTA />
