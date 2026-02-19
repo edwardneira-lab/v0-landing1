@@ -146,10 +146,7 @@ export function Eventos() {
                 </div>
 
                 {/* Hour */}
-                <span className="text-light-cyan/50 text-xs ml-6 mb-3">{evento.hora}</span>
-
-                {/* Venue */}
-                <p className="text-light-cyan/60 text-sm mb-5">{evento.lugar}</p>
+                <span className="text-light-cyan/50 text-xs ml-6 mb-5">{evento.hora}</span>
 
                 {/* CTA Button */}
                 <div className="mt-auto">
