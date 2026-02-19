@@ -31,6 +31,7 @@ const eventos = [
     titulo: "Investor MeetUp - Pereira",
     tipo: "presencial",
     imagen: "/images/events/pereira.jpg",
+    link: "https://luma.com/v7eow2vf",
   },
   {
     fecha: "Mar 3",
