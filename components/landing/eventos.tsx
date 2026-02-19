@@ -63,6 +63,7 @@ const eventos = [
     titulo: "Investor MeetUp - CDMX",
     tipo: "presencial",
     imagen: "/images/events/cdmx.jpg",
+    link: "https://luma.com/rhzr9p6r",
   },
   {
     fecha: "Abr 15",
