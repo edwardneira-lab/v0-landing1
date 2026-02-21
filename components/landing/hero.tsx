@@ -66,7 +66,7 @@ export function Hero() {
               className="bg-white text-oxford-blue hover:bg-white/90 font-semibold text-base px-6"
               asChild
             >
-              <a href="#registro">
+              <a href="https://forms.gle/kuZyzPXZJ35q3Rza8" target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-5 w-5" />
                 Registrarme
               </a>
