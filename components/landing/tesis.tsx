@@ -23,7 +23,7 @@ const phases = [
     phase: 3,
     icon: DollarSign,
     title: "Exit Temprano",
-    duration: "Mes 25 - Ano 3/4",
+    duration: "A\u00f1o 3 en adelante",
     description:
       "Modelo de performance que acompana y traza el camino hacia una venta o adquisicion.",
   },
