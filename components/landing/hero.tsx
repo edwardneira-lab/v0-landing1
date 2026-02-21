@@ -45,7 +45,7 @@ export function Hero() {
           {/* Strong statement */}
           <p className="text-white text-base sm:text-lg font-semibold mb-12 sm:mb-14 max-w-3xl mx-auto border-l-4 border-caribbean-green pl-4 sm:pl-6 text-left">
             No invertimos en ideas. Construimos compañías sólidas, con producto funcional, 
-            que gracias a las ventajas injustas de sus founders nazcan con clientes reales 
+            que gracias a la experiencia de sus founders en la industria nazcan con clientes reales 
             y ventas escalables.
           </p>
 
